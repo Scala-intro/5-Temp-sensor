@@ -91,9 +91,11 @@ val tempMaxPorEstacion = estacionYTemp.reduceByKey((valor_tupla1,valor_tupla2) =
 <a name="schema6"></a>
 
 # 6. Imprimir valores
-Obtenemos un array
+Obtenemos un array, también podemos hacer un `.take(20)` y obtendremos los 20 primeros y no todos los datos.
+
 ~~~scala
 val resultados = tempMaxPorEstacion.collect()
+//val resultados = tempMaxPorEstacion.take(20)
 ~~~
 Por lo tanto para imprimirlo tenemos que iterar por él. La temperatura la transformamos aplicandole un formato para que solo nos imprima dos decimales.
 
